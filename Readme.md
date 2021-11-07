@@ -1,1 +1,1 @@
-Talent Program: Astrid Piñero
+Talent Program: Astrid Piñero Díaz
