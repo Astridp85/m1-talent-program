@@ -1,33 +1,35 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="en">
   <head> 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="My first exercise Huge :)">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../style.css">
     <title>Talent Program Exercises </title>
   </head>
   <body>
-    <header class="topbar">
-      <h1 tabindex="0" role="tabpanel">Make Huge Moves.</h1>
-      <div class="mainmenu"> 
-        <figure class="mainmenu_logo"><a href="https://www.hugeinc.com/contact/bogota/" target="_blank"><img src="../images/logo-Huge.jpeg" alt="logo Huge"></a></figure>
+    <header>
+      <div class="topbar">
+        <div class="topbar__logo">
+          <figure class="topbar__logo"><a href="https://www.hugeinc.com/contact/bogota/" target="_blank"><img src="../images/logo-Huge.jpeg" alt="logo Huge"></a></figure>
+        </div>
+        <h1 class="topbar__title" tabindex="0" role="tabpanel">Make Huge Moves.</h1>
+        <div class="topbar__regional__menu" role="tablist">
+          <label for="lenguageselect" role="treeitem" aria-selected="true">Lenguage</label>
+          <select id="lenguageselect" name="lang">
+            <option value="spanish">ES</option>
+            <option value="english">EN</option>
+          </select>
+          <label for="currancyselect" role="treeitem" aria-selected="false">Currancy</label>
+          <select id="currancyselect" name="coin">
+            <option value="dolar">USD</option>
+            <option value="pesos">COP</option>
+          </select>
+        </div>
       </div>
-      <div class="regional_menu" role="tablist">
-        <label for="lenguageselect" role="treeitem" aria-selected="true">Lenguage</label>
-        <select id="lenguageselect" name="lang">
-          <option value="spanish">ES</option>
-          <option value="english">EN</option>
-        </select>
-        <label for="currancyselect" role="treeitem" aria-selected="false">Currancy</label>
-        <select id="currancyselect" name="coin">
-          <option value="dolar">USD</option>
-          <option value="pesos">COP</option>
-        </select>
-      </div><br>
-      <nav class="mainmanu">
-        <ul>
+      <nav class="topbar__nav__menu">
+        <ul class="topbar__nav__links">
           <li><a href="#">Program</a></li>
           <li>  <a href="#">Tech</a></li>
           <li> <a href="#">Talent</a></li>
@@ -35,24 +37,26 @@
       </nav>
     </header>
     <main>
-      <section class="main_area" role="group">
+      <section class="main__banner" role="group">
         <h2 tabindex="0">Important Picture</h2>
-        <figure class="main_area_img" aria-labelledby="Logo Junior Talent Program" tabindex="0"><img src="../images/Junior-TalentP.jpeg" alt="Logo Junior Talent Program">
+        <figure aria-labelledby="Logo Junior Talent Program" tabindex="0"><img src="../images/Junior-TalentP.jpeg" alt="Logo Junior Talent Program">
           <figcaption>This picture shows Junior Talent Program Logo</figcaption>
         </figure><br>
-        <figure class="main_area_img" aria-labelledby="Program" tabindex="0"><img src="../images/Program.jpg" alt="Program">
+      </section>
+      <section class="main__area" role="group"> 
+        <figure aria-labelledby="Program" tabindex="0"><img src="../images/Program.jpg" alt="Program">
           <figcaption>Program</figcaption>
         </figure>
-        <figure class="main_area_img" aria-labelledby="Tech" tabindex="0"><img src="../images/Tech.jpeg" alt="Tech">
+        <figure aria-labelledby="Tech" tabindex="0"><img src="../images/Tech.jpeg" alt="Tech">
           <figcaption>Tech</figcaption>
         </figure>
-        <figure class="main_area_img" aria-labelledby="Talent" tabindex="0"><img src="../images/Talent.jpeg" alt="Talent">
+        <figure aria-labelledby="Talent" tabindex="0"><img src="../images/Talent.jpeg" alt="Talent">
           <figcaption>Talent</figcaption>
         </figure>
       </section>
-      <section class="contact_form">
+      <section class="contact__form">
         <h2 tabindex="0">Contact Form</h2>
-        <form method="GET" action="result.html" autocomplete="off">
+        <form class="contact__form__form" method="GET" action="result.html" autocomplete="off">
           <fieldset>
             <legend>Profile info (fields with asterisk are required)</legend>
             <div>
@@ -68,7 +72,7 @@
               <input class="contact_form_texfield" id="useremail" name="email" type="email" required placeholder="Maria@mail.com">
             </div>
           </fieldset>
-          <div>
+          <div class="contact__form__full">
             <label for="mensaje">Type your message</label>
             <textarea class="contact_form_texarea" id="mensaje" name="textarea" rows="10" cols="30" placeholder="Write something here"></textarea>
           </div>
@@ -78,8 +82,8 @@
         </form>
       </section>
     </main>
-    <footer>
-      <p class="container_footer_text" tabindex="0">Powered by the M1 talent program at HUGE.</p>
+    <footer class="container__footer">
+      <p class="container__footer__text" tabindex="0">Powered by the M1 talent program at HUGE.</p>
     </footer>
   </body>
 </html>

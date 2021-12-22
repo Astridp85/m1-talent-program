@@ -1,31 +1,32 @@
 doctype html
+doctype html
 html(lang="en")
  head 
   meta(charset="utf-8")
   meta(http-equiv="X-UA-Compatible", content="IE=edge")
   meta(name="viewport" content="width=device-width, initial-scale=1.0")
   meta(name="description" content="My first exercise Huge :)")
-  link(rel="stylesheet", href="")
+  link(rel="stylesheet", href="../style.css")
   title Talent Program Exercises 
  body
-    header.topbar
-     h1(tabindex="0" role="tabpanel") Make Huge Moves.
-     .mainmenu 
-       figure.mainmenu_logo
-         a(href="https://www.hugeinc.com/contact/bogota/" target="_blank")
-           img(src="../images/logo-Huge.jpeg" alt="logo Huge")
-     div.regional_menu(role="tablist")
-       label(for= "lenguageselect" role="treeitem" aria-selected="true") Lenguage
-       select(id="lenguageselect" name="lang")
-         option(value="spanish") ES
-         option(value="english") EN
-       label(for="currancyselect" role="treeitem" aria-selected="false") Currancy
-       select(id="currancyselect" name="coin")
-         option(value="dolar") USD
-         option(value="pesos") COP
-     br
-     nav.mainmanu
-       ul
+    header
+     .topbar
+         .topbar__logo
+           figure.topbar__logo
+             a(href="https://www.hugeinc.com/contact/bogota/" target="_blank")
+               img(src="../images/logo-Huge.jpeg" alt="logo Huge")
+         h1.topbar__title(tabindex="0" role="tabpanel") Make Huge Moves.
+         div.topbar__regional__menu(role="tablist")
+           label(for= "lenguageselect" role="treeitem" aria-selected="true") Lenguage
+           select(id="lenguageselect" name="lang")
+             option(value="spanish") ES
+             option(value="english") EN
+           label(for="currancyselect" role="treeitem" aria-selected="false") Currancy
+           select(id="currancyselect" name="coin")
+             option(value="dolar") USD
+             option(value="pesos") COP
+     nav.topbar__nav__menu
+       ul.topbar__nav__links
          li
            a(href="#") Program
          li   
@@ -33,24 +34,25 @@ html(lang="en")
          li 
            a(href="#") Talent
     main
-      section.main_area(role="group")
+      section.main__banner(role="group")
         h2(tabindex="0") Important Picture
-        figure.main_area_img(aria-labelledby="Logo Junior Talent Program" tabindex="0")
+        figure(aria-labelledby="Logo Junior Talent Program" tabindex="0")
           img(src="../images/Junior-TalentP.jpeg" alt="Logo Junior Talent Program")
           figcaption This picture shows Junior Talent Program Logo
         br
-        figure.main_area_img(aria-labelledby="Program" tabindex="0")
+      section.main__area(role="group") 
+        figure(aria-labelledby="Program" tabindex="0")
           img(src="../images/Program.jpg" alt="Program")
           figcaption Program
-        figure.main_area_img(aria-labelledby="Tech" tabindex="0")
+        figure(aria-labelledby="Tech" tabindex="0")
           img(src="../images/Tech.jpeg" alt="Tech")
           figcaption Tech
-        figure.main_area_img(aria-labelledby="Talent" tabindex="0")
+        figure(aria-labelledby="Talent" tabindex="0")
           img(src="../images/Talent.jpeg" alt="Talent")
           figcaption Talent
-      section.contact_form
+      section.contact__form
         h2(tabindex="0") Contact Form
-        form(method="GET" action="result.html" autocomplete="off")
+        form.contact__form__form(method="GET" action="result.html" autocomplete="off")
           fieldset
             legend Profile info (fields with asterisk are required)
             div
@@ -62,11 +64,10 @@ html(lang="en")
             div
               label(for="useremail") Type your email *
               input(id="useremail" class="contact_form_texfield" name="email" type="email" required placeholder="Maria@mail.com")
-          div
+          div.contact__form__full
             label(for="mensaje") Type your message
             textarea(id="mensaje" class="contact_form_texarea" name="textarea" rows="10" cols="30" placeholder="Write something here")
           div
             button(type="submit" value="Submit") Submit
-    footer
-      p(tabindex="0" class="container_footer_text") Powered by the M1 talent program at HUGE.
-      
+    footer.container__footer
+      p.container__footer__text(tabindex="0") Powered by the M1 talent program at HUGE.
